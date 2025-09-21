@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgresql-laba1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: postgresql-laba1
+  template:
+    metadata:
+      labels:
+        app: postgresql-laba1
+    spec:
+      containers:
+        - name: postgresql
+          image: postgres
+          ports:
+            - containerPort: 5432
+          env:
+            - name: POSTGRES_PASSWORD
+              value: "5432"
+            - name: POSTGRES_USER
+              value: "postgres"
+            - name: POSTGRES_DB
+              value: "laba1"
+          volumeMounts:
+            - name: postgres-data
+              mountPath: /var/lib/postgresql/data
+      volumes:
+        - name: postgres-data
+          emptyDir: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgresql-laba1
+spec:
+  selector:
+    app: postgresql-laba1
+  ports:
+    - port: 5432
+      targetPort: 5432

@@ -1,0 +1,29 @@
+﻿services: 
+  nginx-server:
+    image: nginx
+    container_name: nginx-server
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+  laba1-api:
+    image: laba1-api
+    container_name: laba1-api
+    build:
+      context: ./laba1
+      dockerfile: Dockerfile
+    ports:
+      - 8081:8080
+  postgresql-laba1:
+    image: postgres
+    container_name: postgresql-laba1
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_PASSWORD=5432
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=laba1
+    volumes:
+      - postgresql-laba1-data:/var/lib/postgresql/data
+volumes:
+  postgresql-laba1-data:
