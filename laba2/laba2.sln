@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "laba2", "laba2\laba2.csproj", "{9E869A4A-85F0-4068-A349-1AF4C36891F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonPlaceholder", "JsonPlaceholder\JsonPlaceholder.csproj", "{BF3998A3-2A3A-47E3-9125-EC0C49198883}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9E869A4A-85F0-4068-A349-1AF4C36891F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E869A4A-85F0-4068-A349-1AF4C36891F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E869A4A-85F0-4068-A349-1AF4C36891F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E869A4A-85F0-4068-A349-1AF4C36891F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF3998A3-2A3A-47E3-9125-EC0C49198883}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF3998A3-2A3A-47E3-9125-EC0C49198883}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF3998A3-2A3A-47E3-9125-EC0C49198883}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF3998A3-2A3A-47E3-9125-EC0C49198883}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
