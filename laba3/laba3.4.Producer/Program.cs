@@ -30,11 +30,13 @@ for (var i = 0; i < 10; i++)
 
     var json = JsonSerializer.Serialize(evt);
 
-    await producer.ProduceAsync(topic, new Message<string, string>
-    {
-        Key = evt.VehicleId,
-        Value = json
-    });
+    await producer.ProduceAsync(
+        topic: topic,
+        message: new Message<string, string>
+        {
+            Key = evt.VehicleId,
+            Value = json
+        });
 
     Console.WriteLine($"Отправлено: {evt.VehicleId} {evt.Latitude:F4},{evt.Longitude:F4} {evt.SpeedKmh:F1} км/ч");
     

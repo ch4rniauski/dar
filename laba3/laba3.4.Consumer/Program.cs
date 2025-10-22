@@ -20,8 +20,8 @@ Console.WriteLine("Консьюмер запущен...");
 
 while (true)
 {
-    var cr = consumer.Consume();
-    var evt = JsonSerializer.Deserialize<LocationEvent>(cr.Message.Value);
+    var consumeResult = consumer.Consume();
+    var eventArgs = JsonSerializer.Deserialize<LocationEvent>(consumeResult.Message.Value);
 
-    Console.WriteLine($"Получено: {evt!.VehicleId} {evt.Latitude:F4},{evt.Longitude:F4} {evt.SpeedKmh:F1} км/ч");
+    Console.WriteLine($"Получено: {eventArgs!.VehicleId} {eventArgs.Latitude:F4},{eventArgs.Longitude:F4} {eventArgs.SpeedKmh:F1} км/ч");
 }

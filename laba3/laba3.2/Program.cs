@@ -8,10 +8,10 @@ const int port = 5672;
 const string userName = "guest";
 const string password = "guest";
 
-const string query = "Polatsk";
+const string city = "Polatsk";
 const string apiKey = "d8e29a8e25f51ef204b6a289c2eeeb3c";
 
-const string apiUrl = $"https://api.weatherstack.com/current?access_key={apiKey}&query={query}";
+const string apiUrl = $"https://api.weatherstack.com/current?access_key={apiKey}&query={city}";
 
 using var http = new HttpClient();
 using var request = new HttpRequestMessage(HttpMethod.Get, apiUrl);
